@@ -9,6 +9,9 @@ import { ColorComponent } from './color/color.component';
 import { HomeComponent } from './home/home.component';
 import {RouterModule} from '@angular/router';
 import {appRoutes} from './routes';
+import { AboutComponent } from './about/about.component';
+import {MatGridListModule} from '@angular/material';
+import { ContentComponent } from './content/content.component';
 
 @NgModule({
   declarations: [
@@ -16,11 +19,12 @@ import {appRoutes} from './routes';
     HomeComponent,
     ColorComponent,
     PhotoEditorSDKReactUIComponent, // Add PhotoEditorSDK React UI
-    PhotoEditorSDKDesktopUIComponent, ColorComponent, HomeComponent // Add PhotoEditorSDK Desktop UI
+    PhotoEditorSDKDesktopUIComponent, ColorComponent, HomeComponent, AboutComponent, ContentComponent // Add PhotoEditorSDK Desktop UI
   ],
   imports: [
     BrowserModule,
     NguiReactModule,
+    MatGridListModule,
     RouterModule.forRoot(appRoutes)// required for the module
   ],
   providers: [],
