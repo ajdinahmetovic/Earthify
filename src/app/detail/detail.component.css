@@ -1,0 +1,16 @@
+.img{
+  height: auto;
+  width: 100%;
+  position: relative;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+}
+
+.titl {
+  font-family: 'Fira Sans', sans-serif;
+  text-align: center;
+}
+.container{
+
+}

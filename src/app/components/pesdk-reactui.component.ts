@@ -8,6 +8,8 @@ const license = null;
 
 // the PhotoEditorSDK expects React and ReactDom to be available in global/window
 import * as React from 'react';
+import {ActivatedRoute} from '@angular/router';
+import {DataC} from '../content/data';
 
 const image = new Image();
 image.src = 'assets/example.jpg';
@@ -50,12 +52,18 @@ export class PhotoEditorSDKReactUIComponent {
  // inputs
  @Input() license: string = license;
  // functions
- constructor() {
+  photo;
+ constructor(private route: ActivatedRoute, private data: DataC) {
+
+
+   this.photo = data.getItems();
+   image.src = this.photo[this.route.snapshot.params['id']].img;
+
    const licenseProps = {
      license: this.license
    };
 
-    this.reactComponent = PhotoEditorReactUI.ReactComponent; // use the react Component
+    this.reactComponent = PhotoEditorReactUI.ReactComponent;
     this.reactProps = {...defaultProps, ...licenseProps};
   }
 

@@ -12,14 +12,17 @@ import {appRoutes} from './routes';
 import { AboutComponent } from './about/about.component';
 import {MatGridListModule} from '@angular/material';
 import { ContentComponent } from './content/content.component';
+import { DetailComponent } from './detail/detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    ContentComponent,
+    DetailComponent,
     HomeComponent,
     ColorComponent,
     PhotoEditorSDKReactUIComponent, // Add PhotoEditorSDK React UI
-    PhotoEditorSDKDesktopUIComponent, ColorComponent, HomeComponent, AboutComponent, ContentComponent // Add PhotoEditorSDK Desktop UI
+    PhotoEditorSDKDesktopUIComponent, ColorComponent, HomeComponent, AboutComponent, ContentComponent, DetailComponent // Add PhotoEditorSDK Desktop UI
   ],
   imports: [
     BrowserModule,

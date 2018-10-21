@@ -36,3 +36,12 @@ body {
     -webkit-transform: rotate(359deg);
   }
 }
+
+.footer{
+  text-align: center;
+  background-color: #031926;
+}
+
+.fot{
+  width: 50%;
+}

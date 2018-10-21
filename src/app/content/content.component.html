@@ -1,0 +1,21 @@
+
+<mat-grid-list [cols]="1" rowHeight="500">
+
+  <mat-grid-tile *ngFor="let item of content">
+
+    <div class="card" style="width: 18rem;">
+      <img class="card-img-top" src={{item.img}} alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title txt">{{item.title}}</h5>
+        <p class="card-text txt">{{item.desc.substr(0, 80)+ '...'}}</p>
+      </div>
+
+      <div class="card-body">
+        <a  class="card-link txt" (click)="colorMe(item.id)">Color</a>
+        <a  class="card-link txt" (click)="readMe(item.id)">Read More</a>
+      </div>
+    </div>
+
+  </mat-grid-tile>
+
+</mat-grid-list>
